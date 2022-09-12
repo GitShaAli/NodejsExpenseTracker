@@ -6,32 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            background-color: rgb(208, 252, 237);
+        }
         .container{
-            display: flex;
+            /* display: flex; */
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             text-align: center;
-            margin: 40px auto 20px;
+            margin: 60px auto 20px;
             padding: 10px;
             width: 800px;
             background-color: rgb(84, 170, 141);
-
-
+            box-shadow: rgba(0, 0, 0, 0.24) 7px 7px 7px;
         }
         input{
-            padding: 10px;
-            margin: 2px;
+            border: none;
+            border-bottom: 2px solid rgb(133, 172, 2);
+            background-color: rgb(177, 238, 218);
+            padding: 10px 20px;
+            width: 80%;
+            margin: 8px 0;
         }
         .btn{
+            background-color: rgb(177, 238, 218);
+            color: rgb(133, 172, 2);
+            font-size: 16px;
+            box-shadow: inset;
+            border: none;
+            cursor: pointer;
             padding:5px;
+            margin: 30px;
         }
     </style>
 </head>
 <body>
+    <h1>Expense Tracker</h1>
     <div class="container">
         <form onsubmit="signup(event)">
-            <h2>User Registration</h2>
+            <h2 style="color: white;">User Registration</h2>
             <input type="text" name="name" placeholder="Username" required><br>
             <input type="email" name="email" placeholder="Email" required><br>
             <input type="password" name="pass" placeholder="password" required>

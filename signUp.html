@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 40px auto 20px;
+            padding: 10px;
+            width: 800px;
+            background-color: rgb(84, 170, 141);
+
+
+        }
+        input{
+            padding: 10px;
+            margin: 2px;
+        }
+        .btn{
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="signup(event)">
+            <h2>User Registration</h2>
+            <input type="text" name="name" placeholder="Username" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <input type="password" name="pass" placeholder="password" required>
+            <p>Existing User : <a href="login.html">Login</a></p>
+            <button class="btn" type="submit">REGISTER</button>
+        </form>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

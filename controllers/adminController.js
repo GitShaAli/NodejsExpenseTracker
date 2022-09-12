@@ -20,7 +20,8 @@ exports.signup = (req, res, next) => {
         console.log('user Created');
       })
       .catch(err => {
-        res.status(500).json(err);
+        res.status(500).json('User Already Exists');
+        console.log('Already Exists');
       });
   };
 

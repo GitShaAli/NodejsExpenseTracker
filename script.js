@@ -8,15 +8,21 @@ async function signup(e){
             headers: {'Content-Type': 'application/json'}
           })
           
-        console.log(res.status);
+        console.log(res);
+        if(res.status===500){
+            console.log("lagged")
+            throw new Error('User already Exists');
+        }
         if(res.status===201){
             
             console.log("in")
             window.location.href = "D:/NodejsExpenseTracker/login.html";
-        }else{
+        }
+        else{
             throw new Error('Failed to Login');
         }
     }catch(err){
-        document.body.innerHTML += `<div style="color:red;">${err}<div`;
+        console.log(err);
+        document.body.innerHTML += `<div style="color:red;">${err.response.data}<div`;
     }
 }
